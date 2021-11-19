@@ -38,7 +38,7 @@ Svelte, TS, Stylus, Vite, express, rxjs-like lib
 
 ##### URL
 
-- https://meeting.kakaowork.com
+- https://meeting.kakaowork.com/rac-oon-cho
 
 #### 카카오워크 서비스 연결 진단 FE
 
