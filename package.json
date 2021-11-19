@@ -1,0 +1,22 @@
+{
+  "name": "resume",
+  "main": "index.ts",
+  "repository": "https://github.com/young-do/resume.git",
+  "author": "young-do <yd199323@gmail.com>",
+  "scripts": {
+    "serve": "serve",
+    "mark:watch": "ts-node-dev --respawn index.ts",
+    "mark": "ts-node index.ts"
+  },
+  "dependencies": {
+    "@types/marked": "^4.0.1",
+    "marked": "^4.0.3",
+    "serve": "^13.0.2",
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.2"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.8"
+  }
+}
