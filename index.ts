@@ -1,4 +1,5 @@
 import { marked } from "marked";
+import { format } from "prettier";
 import * as fs from "fs";
 
 marked.use({
@@ -67,4 +68,7 @@ const html = `
 </html>
 `;
 
-fs.writeFileSync("index.html", html);
+fs.writeFileSync(
+  "index.html",
+  format(html, { printWidth: 120, parser: "html" })
+);
