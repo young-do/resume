@@ -105,8 +105,7 @@ hr {
   margin-bottom: 0;
   cursor: pointer;
 }
-.active,
-.accordion:hover {
+.active {
   background-color: #111;
   color: #fff;
 }
