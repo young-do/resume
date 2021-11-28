@@ -96,3 +96,35 @@ hr {
   height: 1px;
   overflow: hidden;
 }
+
+.accordion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+.active,
+.accordion:hover {
+  background-color: #111;
+  color: #fff;
+}
+.accordion::after {
+  font-size: 1rem;
+  content: "\276F";
+  margin-left: 0.25rem;
+}
+.accordion.active::after {
+  transform: rotate(90deg);
+}
+.panel {
+  overflow: hidden;
+  padding: 0 1rem;
+  max-height: 0;
+  background-color: rgb(246, 248, 250);
+}
+.accordion.active + .panel {
+  max-height: inherit;
+  padding-top: 1rem;
+}
