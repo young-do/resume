@@ -53,6 +53,22 @@
         <p>카카오워크 사용자들이 화상회의를 진행할 수 있는 웹페이지(PC, MOBILE)를 개선 및 유지보수하고 있습니다.</p>
 
         <h5>What did I do</h5>
+
+        <h5>화상회의 2.0 (2022.05 ~ 현재)</h5>
+        <ul>
+          <li>
+            기존엔 각 phase마다 도커 이미지 빌드가 필요했으나, SvelteKit으로 전환하여 하나의 이미지로 여러 phase에
+            배포할 수 있도록 간편화하였습니다.
+          </li>
+          <li>상태관리 라이브러리를 RxJS 기반 라이브러리로 전환하여 레거시 코드의 위험도를 줄였습니다.</li>
+          <li>functional css를 도입 및 적극 사용하여 번들된 css의 크기를 줄였습니다.</li>
+          <li>
+            화상회의의 핵심인 WebRTC sdk 설계부터 참여하여 높은 이해도를 가지고
+            <a href="https://blog.kakaowork.com/134">화상회의 2.0</a>을 성공적으로 개발할 수 있었습니다.
+          </li>
+        </ul>
+
+        <h5 class="not-important">화상회의 1.0 (2021.01 ~ 2022.05)</h5>
         <ul>
           <li>
             기존에 api와 정적 파일을 하나의 nodejs 서버로 운영하던 형태를 api 서버와 웹 서버로 분리를 요청하고, 웹
@@ -74,7 +90,8 @@
         </ul>
 
         <h5>Tech Stack</h5>
-        <p>Svelte, TS, Stylus, Vite, express, rxjs-like lib</p>
+        <p><b>2.0:</b> Svelte, TS, unocss, Vite, SvelteKit, RxJS</p>
+        <p class="not-important"><b>1.0:</b> Svelte, TS, Stylus, Vite, express, rxjs-like lib</p>
 
         <h5>URL</h5>
         <ul>

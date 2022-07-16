@@ -127,3 +127,6 @@ hr {
   max-height: inherit;
   padding-top: 1rem;
 }
+.not-important {
+  color: #aaa;
+}
