@@ -130,3 +130,8 @@ hr {
 .not-important {
   color: #aaa;
 }
+.version {
+  margin: 0.5rem 0;
+  text-align: right;
+  font-size: 0.8rem;
+}
