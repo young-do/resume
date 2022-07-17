@@ -1,15 +1,12 @@
 {
   "name": "resume",
-  "main": "index.html",
   "repository": "https://github.com/young-do/resume.git",
   "author": "young-do <yd199323@gmail.com>",
   "scripts": {
-    "serve": "serve"
-  },
-  "dependencies": {
-    "serve": "^13.0.2"
+    "serve": "parcel index.html"
   },
   "devDependencies": {
+    "parcel": "^2.6.2",
     "prettier": "^2.4.1"
   }
 }
