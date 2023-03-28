@@ -2,7 +2,7 @@
 // import Card from "../components/Card.astro";
 
 import Accordion from '../components/Accordion.astro';
-import Anchor from '../components/Anchor.astro';
+import Heading from '../components/Heading.astro';
 import Progressbar from '../components/Progressbar.astro';
 
 const isProd = import.meta.env.PROD;
@@ -43,9 +43,7 @@ const isProd = import.meta.env.PROD;
     <Progressbar />
 
     <main>
-      <h1>
-        <Anchor name="안녕하세요. 조영도입니다." />
-      </h1>
+      <Heading as="h1" name="안녕하세요. 조영도입니다." />
 
       <p class="version not-important">마지막 수정일: 2023.03.19</p>
 
@@ -56,9 +54,7 @@ const isProd = import.meta.env.PROD;
         시대를 앞서가거나 이끌어가는 회사에서 일하고 싶습니다.
       </p>
 
-      <h2>
-        <Anchor name="Contact" />
-      </h2>
+      <Heading as="h2" name="Contact" />
       <ul>
         <li>
           Email:
@@ -85,9 +81,7 @@ const isProd = import.meta.env.PROD;
 
       <hr />
 
-      <h2>
-        <Anchor name="Work Experiences" />
-      </h2>
+      <Heading as="h2" name="Work Experiences" />
 
       <Accordion title="카카오엔터프라이즈" active>
         <p>웹 프론트엔드 개발자<br />2020.03 ~ 현재</p>
@@ -274,9 +268,7 @@ const isProd = import.meta.env.PROD;
 
       <hr />
 
-      <h2>
-        <Anchor name="Other Experiences" />
-      </h2>
+      <Heading as="h2" name="Other Experiences" />
 
       <Accordion title="넥스터즈 22기 개발자">
         <p>프론트엔드 개발자<br />2023.01 ~ 현재</p>
@@ -411,12 +403,10 @@ const isProd = import.meta.env.PROD;
 
       <hr />
 
-      <h2>
-        <Anchor name="Skills" />
-      </h2>
-      <h3>
-        <Anchor name="Frontend" />
-      </h3>
+      <Heading as="h2" name="Skills" />
+
+      <Heading as="h3" name="Frontend" />
+
       <ul>
         <li>HTML/CSS</li>
         <li>JavaScript, TypeScript</li>
@@ -429,24 +419,18 @@ const isProd = import.meta.env.PROD;
         <li>Puppeteer</li>
       </ul>
 
-      <h3>
-        <Anchor name="Backend" />
-      </h3>
+      <Heading as="h3" name="Backend" />
       <ul>
         <li>Node.js, Express</li>
         <li>Phoenix Framework (Elixir)</li>
       </ul>
 
-      <h3>
-        <Anchor name="Database" />
-      </h3>
+      <Heading as="h3" name="Database" />
       <ul>
         <li>MySQL, PostgreSQL</li>
       </ul>
 
-      <h3>
-        <Anchor name="DevOps & Etc" />
-      </h3>
+      <Heading as="h3" name="DevOps & Etc" />
       <ul>
         <li>Docker, Docker-compose</li>
         <li>NCP(Naver Cloud Platform) Server, Object Storage, Cloudflare Pages, Vercel</li>

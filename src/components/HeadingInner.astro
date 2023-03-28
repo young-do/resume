@@ -1,0 +1,16 @@
+---
+interface Props {
+  name: string;
+}
+
+const { name } = Astro.props;
+
+const _name = name.toLowerCase().replace(/ /g, '-');
+const href = `#${_name}`;
+const id = `${_name}`;
+---
+
+<>
+  <a class="anchor" id={id} href={href}>🔗</a>
+  {name}
+</>

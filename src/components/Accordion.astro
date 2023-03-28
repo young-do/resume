@@ -1,6 +1,4 @@
 ---
-import Anchor from './Anchor.astro';
-
 interface Props {
   title: string;
   active?: boolean;
@@ -10,7 +8,7 @@ const { title, active = false } = Astro.props;
 ---
 
 <h3 class:list={['accordion', { active }]}>
-  <Anchor name={title} slot="title" />
+  <a>{title}</a>
 </h3>
 <div class="panel">
   <slot />
