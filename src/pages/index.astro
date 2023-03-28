@@ -1,6 +1,7 @@
 ---
 // import Card from "../components/Card.astro";
 
+import Accordion from '../components/Accordion.astro';
 import Anchor from '../components/Anchor.astro';
 import Progressbar from '../components/Progressbar.astro';
 
@@ -89,10 +90,8 @@ const isProd = import.meta.env.PROD;
       <h2>
         <Anchor name="Work Experiences" />
       </h2>
-      <h3 class="accordion active">
-        <Anchor name="카카오엔터프라이즈" />
-      </h3>
-      <div class="panel">
+
+      <Accordion title="카카오엔터프라이즈" active>
         <p>웹 프론트엔드 개발자<br />2020.03 ~ 현재</p>
 
         <h4>카카오워크 화상회의 FE</h4>
@@ -250,12 +249,9 @@ const isProd = import.meta.env.PROD;
             >
           </li>
         </ul>
-      </div>
+      </Accordion>
 
-      <h3 class="accordion">
-        <Anchor name="학생독립만세 (비개발)" />
-      </h3>
-      <div class="panel">
+      <Accordion title="학생독립만세 (비개발)">
         <p>서비스 운영 및 기획자<br />2018.05 ~ 2019.04</p>
 
         <h4>후불제 과외 서비스 운영</h4>
@@ -276,7 +272,7 @@ const isProd = import.meta.env.PROD;
           </li>
           <li>저의 전문분야가 아니었기에 어려운 점과 부족한 점은 있었지만, 꽤 유의미한 결과를 얻어낼 수 있었습니다.</li>
         </ul>
-      </div>
+      </Accordion>
 
       <hr />
 
@@ -284,10 +280,7 @@ const isProd = import.meta.env.PROD;
         <Anchor name="Other Experiences" />
       </h2>
 
-      <h3 class="accordion">
-        <Anchor name="넥스터즈 22기 개발자" />
-      </h3>
-      <div class="panel">
+      <Accordion title="넥스터즈 22기 개발자">
         <p>프론트엔드 개발자<br />2023.01 ~ 현재</p>
         <ul>
           <li>사이드 프로젝트에 대한 갈망을 풀고자 넥스터즈에 참여했습니다.</li>
@@ -315,12 +308,9 @@ const isProd = import.meta.env.PROD;
           </li>
           <li>새로운 사람들과 재미난 프로젝트를 하며 잃는 것 없이 좋은 것만 얻어간 유익한 활동이었습니다.</li>
         </ul>
-      </div>
+      </Accordion>
 
-      <h3 class="accordion">
-        <Anchor name="부스트캠프 웹모바일 7기 멤버십 코드 리뷰어, 멘토" />
-      </h3>
-      <div class="panel">
+      <Accordion title="부스트캠프 웹모바일 7기 멤버십 코드 리뷰어, 멘토">
         <p>프론트엔드 코드 리뷰어, 멘토<br />2022.09 ~ 2022.12 (12주)</p>
         <ul>
           <li>성장에 기여하고 싶은 마음과 저또한 성장했는지 확인하고 싶은 마음으로 참여했습니다.</li>
@@ -343,12 +333,9 @@ const isProd = import.meta.env.PROD;
             확인하실 수 있습니다.
           </li>
         </ul>
-      </div>
+      </Accordion>
 
-      <h3 class="accordion">
-        <Anchor name="부스트캠프 웹모바일 6기 멤버십 코드 리뷰어" />
-      </h3>
-      <div class="panel">
+      <Accordion title="부스트캠프 웹모바일 6기 멤버십 코드 리뷰어">
         <p>프론트엔드 코드 리뷰어<br />2021.09 ~ 2021.10 (6주)</p>
         <ul>
           <li>도움을 얻은 만큼 드리고 싶었고, 다시 초심으로 돌아가는 마음도 갖고자 참여했습니다.</li>
@@ -363,12 +350,9 @@ const isProd = import.meta.env.PROD;
           <li>주로 코드 일관성 및 개발 방향에 대한 피드백과, 학습하면서 궁금한 점에 대한 질의응답을 했습니다.</li>
           <li>피드백을 주는 과정에서 오히려 저도 성장하고 학습할 수 있는 기회였습니다.</li>
         </ul>
-      </div>
+      </Accordion>
 
-      <h3 class="accordion">
-        <Anchor name="부스트캠프 2019(웹 4기) 챌린지/멤버십 수료" />
-      </h3>
-      <div class="panel">
+      <Accordion title="부스트캠프 2019(웹 4기) 챌린지/멤버십 수료">
         <p>첼린지/멤버십 과정 수료생<br />2019.07 ~ 2019.12</p>
         <ul>
           <li>웹 개발 전반에 대해 이해를 넓힐 수 있었습니다.</li>
@@ -413,12 +397,9 @@ const isProd = import.meta.env.PROD;
             </a>
           </li>
         </ul>
-      </div>
+      </Accordion>
 
-      <h3 class="accordion">
-        <Anchor name="성균관대학교" />
-      </h3>
-      <div class="panel">
+      <Accordion title="성균관대학교">
         <p>컴퓨터공학과, 경영학과 학사<br />2012.03 ~ 2020.02</p>
         <ul>
           <li>컴퓨터공학에 대한 기본 소양을 익혔습니다.</li>
@@ -428,7 +409,7 @@ const isProd = import.meta.env.PROD;
           </li>
           <li>그러나, 재미있는 사실은 복수전공을 하면서 저의 천직이 개발자임을 느낄 수 있었습니다.</li>
         </ul>
-      </div>
+      </Accordion>
 
       <hr />
 
@@ -476,10 +457,5 @@ const isProd = import.meta.env.PROD;
       </ul>
       <hr />
     </main>
-    <script is:inline>
-      document.querySelectorAll('.accordion').forEach((accordion) => {
-        accordion.addEventListener('click', () => accordion.classList.toggle('active'));
-      });
-    </script>
   </body>
 </html>

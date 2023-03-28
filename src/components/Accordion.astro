@@ -1,0 +1,27 @@
+---
+import Anchor from './Anchor.astro';
+
+interface Props {
+  title: string;
+  active?: boolean;
+}
+
+const { title, active = false } = Astro.props;
+---
+
+<h3 class:list={['accordion', { active }]}>
+  <Anchor name={title} slot="title" />
+</h3>
+<div class="panel">
+  <slot />
+</div>
+
+<script>
+  document.querySelectorAll('.accordion').forEach((accordion) => {
+    accordion.addEventListener('click', () => {
+      console.log(accordion.classList);
+      accordion.classList.toggle('active');
+      console.log(accordion.classList);
+    });
+  });
+</script>
