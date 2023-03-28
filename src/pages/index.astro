@@ -1,5 +1,7 @@
 ---
 // import Card from "../components/Card.astro";
+
+const isProd = import.meta.env.PROD;
 ---
 
 <!DOCTYPE html>
@@ -21,15 +23,17 @@
     <meta name="generator" content={Astro.generator} />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2LDBHRPKXL"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-2LDBHRPKXL");
-    </script>
+    {
+      isProd && (
+        <>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-2LDBHRPKXL" />
+          <script is:inline>
+            window.dataLayer = window.dataLayer || []; function gtag() {dataLayer.push(arguments)}; gtag("js", new
+            Date()); gtag("config", "G-2LDBHRPKXL");
+          </script>
+        </>
+      )
+    }
   </head>
   <body>
     <div id="progress-bar"></div>
@@ -499,17 +503,17 @@
       <hr />
     </main>
     <script is:inline>
-      document.addEventListener("scroll", () => {
+      document.addEventListener('scroll', () => {
         const docElem = document.documentElement;
         const docBody = document.body;
-        const scrollTop = document.documentElement["scrollTop"] || docBody["scrollTop"];
-        const scrollBottom = (docElem["scrollHeight"] || docBody["scrollHeight"]) - window.innerHeight;
-        const scrollPercent = (scrollTop / scrollBottom) * 100 + "%";
+        const scrollTop = document.documentElement['scrollTop'] || docBody['scrollTop'];
+        const scrollBottom = (docElem['scrollHeight'] || docBody['scrollHeight']) - window.innerHeight;
+        const scrollPercent = (scrollTop / scrollBottom) * 100 + '%';
 
-        document.getElementById("progress-bar").style.setProperty("--scrollAmount", scrollPercent);
+        document.getElementById('progress-bar').style.setProperty('--scrollAmount', scrollPercent);
       });
-      document.querySelectorAll(".accordion").forEach((accordion) => {
-        accordion.addEventListener("click", () => accordion.classList.toggle("active"));
+      document.querySelectorAll('.accordion').forEach((accordion) => {
+        accordion.addEventListener('click', () => accordion.classList.toggle('active'));
       });
     </script>
   </body>
