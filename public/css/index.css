@@ -9,6 +9,7 @@ body {
     sans-serif;
   font-size: 16px;
   word-break: break-all;
+  scroll-padding-top: 2rem;
 }
 
 @media screen and (max-width: 768px) {
