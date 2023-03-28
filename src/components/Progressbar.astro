@@ -1,0 +1,15 @@
+<div class="progress-bar"></div>
+
+<script>
+  document.addEventListener('scroll', () => {
+    const docElem = document.documentElement;
+    const docBody = document.body;
+    const scrollTop = document.documentElement['scrollTop'] || docBody['scrollTop'];
+    const scrollBottom = (docElem['scrollHeight'] || docBody['scrollHeight']) - window.innerHeight;
+    const scrollPercent = (scrollTop / scrollBottom) * 100 + '%';
+
+    document.querySelectorAll('.progress-bar').forEach((element) => {
+      (element as HTMLDivElement).style.setProperty('--scrollAmount', scrollPercent);
+    });
+  });
+</script>

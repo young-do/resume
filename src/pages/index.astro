@@ -1,6 +1,8 @@
 ---
 // import Card from "../components/Card.astro";
 
+import Progressbar from '../components/Progressbar.astro';
+
 const isProd = import.meta.env.PROD;
 ---
 
@@ -17,8 +19,8 @@ const isProd = import.meta.env.PROD;
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.4/dist/web/static/pretendard.css"
     />
-    <link rel="stylesheet" href="/normalize.css" />
-    <link rel="stylesheet" href="/index.css" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/index.css" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
 
@@ -36,8 +38,9 @@ const isProd = import.meta.env.PROD;
     }
   </head>
   <body>
-    <div id="progress-bar"></div>
-    <main class="border-box">
+    <Progressbar />
+
+    <main>
       <h1>
         <a name="안녕하세요. 조영도입니다." class="anchor" href="#안녕하세요. 조영도입니다.">
           안녕하세요. 조영도입니다.
@@ -503,15 +506,6 @@ const isProd = import.meta.env.PROD;
       <hr />
     </main>
     <script is:inline>
-      document.addEventListener('scroll', () => {
-        const docElem = document.documentElement;
-        const docBody = document.body;
-        const scrollTop = document.documentElement['scrollTop'] || docBody['scrollTop'];
-        const scrollBottom = (docElem['scrollHeight'] || docBody['scrollHeight']) - window.innerHeight;
-        const scrollPercent = (scrollTop / scrollBottom) * 100 + '%';
-
-        document.getElementById('progress-bar').style.setProperty('--scrollAmount', scrollPercent);
-      });
       document.querySelectorAll('.accordion').forEach((accordion) => {
         accordion.addEventListener('click', () => accordion.classList.toggle('active'));
       });
