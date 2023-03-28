@@ -138,3 +138,23 @@ hr {
   text-align: right;
   font-size: 0.8rem;
 }
+
+/* for linking */
+.anchor {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: -20px;
+  padding-right: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.heading {
+  position: relative;
+}
+.anchor:hover,
+.heading:hover .anchor {
+  opacity: 1;
+}
