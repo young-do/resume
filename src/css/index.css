@@ -123,6 +123,15 @@ hr {
 .accordion.active::after {
   transform: rotate(90deg);
 }
+.accordion-title {
+  text-decoration: none;
+  color: #40a7eb;
+}
+.accordion-title:hover,
+.accordion-title:focus {
+  text-decoration: underline;
+}
+
 .panel {
   overflow: hidden;
   padding: 0 1rem;
