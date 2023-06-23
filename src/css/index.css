@@ -133,14 +133,11 @@ hr {
 }
 
 .panel {
-  overflow: hidden;
   padding: 0 1rem;
-  max-height: 0;
   background-color: rgb(246, 248, 250);
 }
 .accordion.active + .panel {
-  max-height: inherit;
-  padding-top: 1rem;
+  padding: 1rem;
 }
 .not-important {
   color: #aaa;

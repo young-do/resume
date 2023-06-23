@@ -12,7 +12,7 @@ const { title, active = false } = Astro.props;
     {title}
   </span>
 </h3>
-<div class="panel">
+<div class="panel" hidden={active ? null : 'until-found'}>
   <slot />
 </div>
 
@@ -20,6 +20,19 @@ const { title, active = false } = Astro.props;
   document.querySelectorAll('.accordion').forEach((accordion) => {
     accordion.addEventListener('click', () => {
       accordion.classList.toggle('active');
+
+      const panel = accordion.nextElementSibling;
+      if (accordion.classList.contains('active')) {
+        panel?.removeAttribute('hidden');
+      } else {
+        panel?.setAttribute('hidden', 'until-found');
+      }
+    });
+  });
+
+  document.querySelectorAll('.panel').forEach((panel) => {
+    panel.addEventListener('beforematch', () => {
+      panel.previousElementSibling?.classList.add('active');
     });
   });
 </script>
