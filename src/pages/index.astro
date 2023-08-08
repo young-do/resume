@@ -3,6 +3,7 @@ import '../css/index.css';
 import Accordion from '../components/Accordion.astro';
 import Heading from '../components/Heading.astro';
 import Progressbar from '../components/Progressbar.astro';
+import LogRocket from '../modules/LogRocket.astro';
 
 const isProd = import.meta.env.PROD;
 ---
@@ -31,6 +32,10 @@ const isProd = import.meta.env.PROD;
     }
   </head>
   <body>
+    <!-- 로그용 모듈 -->
+    <LogRocket />
+
+    <!-- 레이아웃 시작 -->
     <Progressbar />
 
     <main>

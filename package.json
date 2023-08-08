@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "astro": "^2.1.7",
+    "logrocket": "^5.0.1",
     "prettier": "^2.8.7",
     "prettier-plugin-astro": "^0.8.0"
   }
