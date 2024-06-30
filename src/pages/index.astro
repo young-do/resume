@@ -39,7 +39,7 @@ const isProd = import.meta.env.PROD;
     <main>
       <Heading as="h1" name="안녕하세요. 조영도입니다." />
 
-      <p class="version not-important">마지막 수정일: 2023.06.24</p>
+      <p class="version not-important">마지막 수정일: 2024.06.30</p>
 
       <p>
         웹 프론트엔드 개발자로 일하고 있습니다.<br />
@@ -77,8 +77,45 @@ const isProd = import.meta.env.PROD;
 
       <Heading as="h2" name="Work Experiences" />
 
-      <Accordion title="카카오엔터프라이즈" active>
-        <p>웹 프론트엔드 개발자<br />2020.03 ~ 현재</p>
+      <Accordion title="네이버클라우드" active>
+        <p>웹 프론트엔드 개발자<br />2023.10 ~ 현재</p>
+
+        <h4>CLOVA Studio</h4>
+        <p>2023.10 ~ 현재</p>
+
+        <h5>Description</h5>
+        <p>
+          비즈니스에 최적화된 하이퍼스케일 AI 개발도구 입니다. 사용자는 이 도구를 통해 AI 모델을 쉽게 튜닝하거나 이용할 수 있습니다.
+        </p>
+
+        <h5>What did I do</h5>
+        <ul>
+          <li>
+            팀원들과 함께 신규 기능을 개발하고 있습니다. 또한 기존 페이지를 하드코딩에서 서버 데이터에 따라 자동화할 수 있도록 개선하고 있습니다.
+          </li>
+          <li>
+            부드러운 사용자 경험을 위해 <a href="https://reactcommunity.org/react-transition-group/" target="_blank">React Transition Group</a>을 활용하여 
+            Collapse 컴포넌트를 만들어 아코디언 메뉴들에 적용하였습니다.
+          </li>
+          <li>
+            jest로 테스트 실행 중 Jenkins 프로세스가 중단되는 경우 수동 재시작하던 부분을 pm2를 사용하여 자동화하였습니다.
+          </li>
+          
+        </ul>
+
+        <h5>Tech Stack</h5>
+        <p>React, TS, SCSS, webpack, recoil, Storybook, jest</p>
+
+        <h5>URL</h5>
+        <ul>
+          <li>
+            <a href="https://www.ncloud.com/product/aiService/clovaStudio" target="_blank">ncloud</a> 콘솔에서 서비스 신청 후 접근 가능합니다.
+          </li> 
+        </ul>
+      </Accordion>
+
+      <Accordion title="카카오엔터프라이즈">
+        <p>웹 프론트엔드 개발자<br />2020.03 ~ 2023.08</p>
 
         <h4>교육현장 화상회의 서비스(가칭)</h4>
         <p>2022.10 ~ 2023.03</p>
@@ -108,14 +145,14 @@ const isProd = import.meta.env.PROD;
         </ul>
 
         <h4>카카오워크 화상회의 FE</h4>
-        <p>2021.01 ~ 현재</p>
+        <p>2021.01 ~ 2023.08</p>
 
         <h5>Description</h5>
-        <p>카카오워크 사용자들이 화상회의를 진행할 수 있는 웹페이지(PC, MOBILE)를 개선 및 유지보수하고 있습니다.</p>
+        <p>카카오워크 사용자들이 화상회의를 진행할 수 있는 웹페이지(PC, MOBILE)를 개선 및 유지보수했습니다.</p>
 
         <h5>What did I do</h5>
 
-        <h5>화상회의 2.0 (2022.05 ~ 현재)</h5>
+        <h5>화상회의 2.0 (2022.05 ~ 2023.08)</h5>
         <ul>
           <li>
             기존엔 각 phase마다 도커 이미지 빌드가 필요했으나, SvelteKit으로 전환하여 하나의 이미지로 여러 phase에
@@ -171,8 +208,8 @@ const isProd = import.meta.env.PROD;
         <h5>URL</h5>
         <ul>
           <li>
-            <a href="https://meeting.kakaowork.com/rac-oon-cho" target="_blank">
-              https://meeting.kakaowork.com/rac-oon-cho
+            <a href="https://www.ncloud.com/product/aiService/clovaStudio" target="_blank">
+              https://www.ncloud.com/product/aiService/clovaStudio
             </a>
           </li>
         </ul>
