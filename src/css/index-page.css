@@ -1,0 +1,516 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css');
+@import url('./normalize.css');
+
+:root {
+  --font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  
+  /* Color Palette - Premium Slate & Royal Indigo */
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --primary-light: #e0e7ff;
+  --primary-glow: rgba(79, 70, 229, 0.15);
+  --accent: #0ea5e9;
+  --accent-light: #e0f2fe;
+  
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+  
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: #ffffff;
+  color: var(--slate-800);
+  font-family: var(--font-family);
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  padding: 0;
+}
+
+
+/* Page Card Container */
+.resume-page {
+  width: min(100%, 1080px);
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+/* Hero / Header */
+.resume-hero {
+  padding: 3.5rem 4rem 2rem;
+  background: #ffffff;
+}
+
+.hero-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.hero-title-area h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1.1;
+  color: var(--slate-900);
+}
+
+.hero-role {
+  margin: 0.5rem 0 0;
+  color: var(--primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.resume-updated {
+  margin: 0;
+  font-size: 0.825rem;
+  color: var(--slate-400);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.resume-intro {
+  margin-top: 1.75rem;
+  max-width: 800px;
+}
+
+.resume-intro p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--slate-600);
+  word-break: keep-all;
+}
+
+/* Sidebar Links styling */
+.section-content-html a {
+  color: var(--slate-700);
+  text-decoration: none;
+  border-bottom: 1px solid var(--slate-200);
+  transition: all var(--transition-fast);
+}
+
+.section-content-html a:hover {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+/* Main Layout Grid */
+.resume-layout {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 3.5rem;
+  padding: 1.75rem 4rem 4rem;
+}
+
+.resume-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.resume-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  min-width: 0;
+}
+
+/* Section general styling */
+.resume-section h2 {
+  margin: 0 0 1.15rem;
+  color: var(--slate-900);
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--slate-200);
+  padding-bottom: 0.5rem;
+}
+
+/* Skills Section Badges styling */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.skill-group h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--slate-700);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.skill-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  background: var(--slate-100);
+  color: var(--slate-700);
+  border-radius: 5px;
+  border: 1px solid var(--slate-200);
+}
+
+/* Sidebar HTML Content styling (e.g. Education) */
+.section-content-html ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section-content-html li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--slate-500);
+  margin-bottom: 0.85rem;
+}
+
+.section-content-html li strong {
+  color: var(--slate-900);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Other Experience */
+.other-experience-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.15rem 0 0;
+}
+
+.other-experience-section li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--slate-500); /* Date color */
+  margin-bottom: 1.25rem;
+  padding: 0;
+  border: none;
+}
+
+.other-experience-section li strong {
+  color: var(--slate-900);
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+/* Work Experience Timeline */
+.work-experience-section .section-content {
+  position: relative;
+  border-left: 2px solid var(--slate-200);
+  padding-left: 30px;
+  margin-left: 8px;
+  margin-top: 1.5rem;
+}
+
+.work-experience-section h3 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--slate-900);
+  position: relative;
+}
+
+.work-experience-section h3::before {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 0.45rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid var(--primary);
+  box-shadow: 0 0 0 4px var(--primary-light);
+  transition: all var(--transition-normal);
+}
+
+.work-experience-section h3:hover::before {
+  background: var(--primary);
+  transform: scale(1.15);
+  box-shadow: 0 0 0 6px var(--primary-glow);
+}
+
+.work-experience-section h3 + p {
+  margin: 0.4rem 0 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--slate-500);
+}
+
+.work-experience-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 1.75rem;
+}
+
+.work-experience-section li {
+  margin-bottom: 0.125rem;
+  line-height: 1.65;
+  color: var(--slate-600);
+  font-size: 0.975rem;
+}
+
+.work-experience-section .section-content > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive media queries */
+@media screen and (max-width: 860px) {
+  body {
+    padding: 0;
+    background: #ffffff;
+  }
+  
+  .resume-hero {
+    padding: 3rem 2rem 2.5rem;
+  }
+  
+  .hero-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .hero-title-area h1 {
+    font-size: 2.5rem;
+  }
+  
+  .resume-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 2.5rem 2rem 3.5rem;
+  }
+  
+  .resume-sidebar {
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .resume-hero {
+    padding: 2.5rem 1.25rem 2rem;
+  }
+  
+  .hero-title-area h1 {
+    font-size: 2.25rem;
+  }
+  
+  .resume-layout {
+    padding: 2rem 1.25rem 3rem;
+  }
+}
+
+/* Print Optimization Styles */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 10mm; /* Small browser margin, CSS will handle document margins */
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #1e293b !important;
+    font-size: 13.5px; /* Base scaling for print */
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  .resume-page {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .resume-hero {
+    padding: 2.25rem 2.5rem 1.5rem;
+  }
+
+  .hero-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .hero-title-area h1 {
+    font-size: 2.5rem;
+    background: none;
+    color: #0f172a;
+  }
+
+  .hero-role {
+    font-size: 1.15rem;
+    color: #4f46e5;
+  }
+
+  .resume-updated {
+    font-size: 0.8rem;
+    color: #94a3b8;
+  }
+
+  .resume-intro {
+    margin-top: 1.25rem;
+  }
+
+  .resume-intro p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .resume-layout {
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 3rem;
+    padding: 1rem 2.5rem 2.5rem;
+  }
+
+  .resume-sidebar {
+    gap: 1.75rem;
+  }
+
+  .resume-main {
+    gap: 2rem;
+  }
+
+  .resume-section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .resume-section h2 {
+    margin: 0 0 1rem;
+    font-size: 1.05rem;
+    padding-bottom: 0.4rem;
+    border-bottom-color: var(--slate-200);
+  }
+
+  /* Sidebar details style */
+  .section-content-html li {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-content-html li strong {
+    font-size: 0.95rem;
+  }
+
+  .section-content-html a {
+    text-decoration: none;
+    border-bottom: none;
+    color: #1e293b;
+  }
+
+  /* Skills style */
+  .skills-container {
+    gap: 0.95rem;
+  }
+
+  .skill-group h3 {
+    margin: 0 0 0.4rem;
+    font-size: 0.8rem;
+  }
+
+  .skill-badges {
+    gap: 0.35rem;
+  }
+
+  .skill-badge {
+    font-size: 0.7rem;
+    padding: 0.18rem 0.5rem;
+    background: #f1f5f9 !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #334155 !important;
+    border-radius: 4px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Work Experience style */
+  .work-experience-section .section-content {
+    border-left-color: #cbd5e1;
+    padding-left: 24px;
+    margin-left: 6px;
+    margin-top: 1rem;
+  }
+
+  .work-experience-section h3 {
+    font-size: 1.15rem;
+  }
+
+  .work-experience-section h3::before {
+    left: -31px;
+    top: 0.35rem;
+    width: 10px;
+    height: 10px;
+    border-color: #4f46e5;
+    background: #ffffff !important;
+    box-shadow: none;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .work-experience-section h3 + p {
+    margin: 0.3rem 0 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .work-experience-section ul {
+    margin-bottom: 1.25rem;
+  }
+
+  .work-experience-section li {
+    font-size: 0.875rem;
+    margin-bottom: 0.125rem;
+  }
+
+  /* Other Experience style */
+  .other-experience-section ul {
+    margin-top: 0.85rem;
+  }
+
+  .other-experience-section li {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .other-experience-section li strong {
+    font-size: 1.05rem;
+  }
+}

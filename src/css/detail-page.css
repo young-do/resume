@@ -97,9 +97,10 @@ li {
   margin-bottom: 0.25rem;
 }
 
-hr {
-  margin: 2rem 0 4rem;
-  border-color: #3176b4;
+h2:not(:first-of-type) {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #3176b4;
 }
 
 [aria-hidden='true'] {
@@ -155,7 +156,7 @@ hr {
   color: #aaa;
 }
 .version {
-  margin: 0.5rem 0;
+  margin: 0.25rem 0;
   text-align: right;
   font-size: 0.8rem;
 }
