@@ -309,13 +309,39 @@ body {
   }
   
   .resume-layout {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 3rem;
     padding: 2.5rem 2rem 3.5rem;
   }
   
   .resume-sidebar {
+    display: contents;
     padding-right: 0;
+  }
+
+  .resume-main {
+    display: contents;
+  }
+
+  .contact-section {
+    order: 1;
+  }
+
+  .work-experience-section {
+    order: 2;
+  }
+
+  .other-experience-section {
+    order: 3;
+  }
+
+  .education-section {
+    order: 4;
+  }
+
+  .skills-section {
+    order: 5;
   }
 }
 

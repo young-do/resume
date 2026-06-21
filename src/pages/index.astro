@@ -1,11 +1,12 @@
 ---
 import '../css/index-page.css';
-import resumeMarkdown from '../../README.md?raw';
+import resumeMarkdown from '../../RESUME.md?raw';
 import { parseSummaryMarkdown } from '../lib/summaryMarkdown';
 
 const isProd = import.meta.env.PROD;
 const { meta, introHtml, sections, skills } = await parseSummaryMarkdown(resumeMarkdown);
 const findSection = (title: string) => sections.find((section) => section.title === title);
+const sectionClassName = (title: string) => title.toLowerCase().replace(/\s+/g, '-');
 const sidebarSections = ['Contact', 'Education'].map(findSection).filter((section) => section !== undefined);
 const mainSections = ['Work Experience', 'Other Experience']
   .map(findSection)
@@ -56,7 +57,7 @@ const mainSections = ['Work Experience', 'Other Experience']
         <aside class="resume-sidebar">
           {
             sidebarSections.map((section) => (
-              <section class="resume-section">
+              <section class={`resume-section ${sectionClassName(section.title)}-section`}>
                 <h2>{section.title}</h2>
                 <div class="section-content-html" set:html={section.html} />
               </section>
@@ -87,7 +88,7 @@ const mainSections = ['Work Experience', 'Other Experience']
         <div class="resume-main">
           {
             mainSections.map((section) => (
-              <section class={`resume-section ${section.title === 'Work Experience' ? 'work-experience-section' : 'other-experience-section'}`}>
+              <section class={`resume-section ${sectionClassName(section.title)}-section`}>
                 <h2>{section.title}</h2>
                 <div class="section-content" set:html={section.html} />
               </section>
